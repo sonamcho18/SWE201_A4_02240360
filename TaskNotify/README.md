@@ -34,44 +34,6 @@ Expo SDK 54 · React Native 0.81 · TypeScript · Node.js · MongoDB Atlas
 
 ---
 
-## Project Structure
-
-```
-TaskNotify/
-├── App.tsx
-├── app.json
-├── eas.json
-├── package.json
-├── src/
-│   ├── api/backendApi.ts
-│   ├── navigation/AppNavigator.tsx
-│   ├── notifications/
-│   │   ├── notificationChannels.ts
-│   │   ├── notificationService.ts
-│   │   └── notificationListeners.ts
-│   ├── screens/
-│   │   ├── SplashScreen.tsx
-│   │   ├── HomeScreen.tsx
-│   │   ├── TaskListScreen.tsx
-│   │   ├── AddTaskScreen.tsx
-│   │   ├── EditTaskScreen.tsx
-│   │   ├── TaskDetailScreen.tsx
-│   │   ├── SettingsScreen.tsx
-│   │   └── AboutScreen.tsx
-│   ├── services/storageService.ts
-│   ├── types/index.ts
-│   └── utils/helpers.ts
-├── assets/screenshots/        ← put your screenshots here
-└── backend/
-    ├── server.js
-    ├── models/PushToken.js
-    ├── controllers/
-    ├── middleware/auth.js
-    └── routes/
-```
-
----
-
 ## API Endpoints
 
 | Method | Endpoint | Auth | Description |
@@ -87,7 +49,7 @@ TaskNotify/
 
 **Frontend** — `TaskNotify/.env`
 ```
-EXPO_PUBLIC_API_URL=https://your-backend.onrender.com
+EXPO_PUBLIC_API_URL=(https://tasknotify-backend-1gd7.onrender.com)
 EXPO_PUBLIC_PROJECT_ID=your-eas-project-id
 ```
 
@@ -121,56 +83,51 @@ Body:
 
 ## Screenshots
 
-> Place screenshots in `assets/screenshots/` with the exact filenames below.
+> Screenshots are stored in the `image/` folder at the root of TaskNotify directory.
 
 ### 1. Permission Request
-![Permission Request](assets/screenshots/01-permission-request.png)
+![Permission Request](image/01-permission-request.png)
 *First launch — system dialog requesting notification permission.*
 
 ### 2. Permission Granted
-![Permission Granted](assets/screenshots/02-permission-granted.png)
+![Permission Granted](image/02-permission-granted.png)
 *Settings screen showing permission status as GRANTED in green.*
 
 ### 3. Add Task
-![Add Task](assets/screenshots/03-add-task.png)
+![Add Task](image/03-add-task.png)
 *Add Task screen with title, description, due date, reminder, and toggle filled.*
 
 ### 4. Task List
-![Task List](assets/screenshots/04-task-list.png)
+![Task List](image/04-task-list.png)
 *Task List showing tasks with notification ON/OFF badge, edit and delete actions.*
 
 ### 5. Task Detail
-![Task Detail](assets/screenshots/05-task-detail.png)
+![Task Detail](image/05-task-detail.png)
 *Task Detail showing due date, reminder, notification status, and action buttons.*
 
 ### 6. Local Notification (Foreground)
-![Local Notification](assets/screenshots/06-local-notification.png)
+![Local Notification](image/06-local-notification.png)
 *Foreground alert dialog showing notification title and body with View Task button.*
 
 ### 7. Remote Notification (System Tray)
-![Remote Notification](assets/screenshots/07-remote-notification.png)
+![Remote Notification](image/07-remote-notification.png)
 *Android notification tray showing remote push notification from backend.*
 
 ### 8. Notification Tap → Task Detail
-![Notification Navigation](assets/screenshots/08-notification-navigation.png)
+![Notification Navigation](image/08-notification-navigation.png)
 *App opened directly to Task Detail after tapping the notification.*
 
 ### 9. Postman Request
-![Postman](assets/screenshots/09-postman.png)
+![Postman](image/09-postman.png)
 *Postman showing POST /api/send-notification with 200 OK and results.*
 
 ### 10. MongoDB Token
-![MongoDB](assets/screenshots/10-mongodb-token.png)
-*MongoDB Atlas — pushtokens collection with stored device push token.*
+![alt text](image/db.png)
+
 
 ### 11. Render Deployment
-![Render](assets/screenshots/11-render-deployment.png)
-*Render dashboard showing backend service as Live and running.*
+![Render](image/renderback.png)
+
 
 ---
 
-## Known Limitations
-
-- Push tokens require a real Android device (not emulator)
-- Render free tier sleeps after 15 min — first request takes ~30 sec to wake up
-- `SCHEDULE_EXACT_ALARM` permission required on Android 13+
