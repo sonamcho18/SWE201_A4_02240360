@@ -1,0 +1,49 @@
+{
+  "expo": {
+    "name": "OrderUpdateApp",
+    "slug": "orderupdateapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0E1A"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.orderupdateapp.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A0E1A"
+      },
+      "package": "com.orderupdateapp.app"
+    },
+    "plugins": [
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#F97316",
+          "androidMode": "default",
+          "androidCollapsedTitle": "OrderUpdateApp",
+          "iosDisplayInForeground": true,
+          "sounds": []
+        }
+      ]
+    ],
+    "scheme": "orderupdateapp",
+    "extra": {
+      "eas": {
+        "projectId": "af70c703-3c6b-4715-9cd9-92fa4af15e19"
+      }
+    },
+    "owner": "sonamchokizee"
+  }
+}
